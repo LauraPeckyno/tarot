@@ -1,0 +1,67 @@
+import React, { useState, useEffect } from 'react';
+import { cardImages } from '../models/cardImages';
+
+const CardCarousel = () => {
+  const [cards, setCards] = useState([]);
+  const [error, setError] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchCards = async () => {
+      try {
+        const response = await fetch('https://tarotapi.dev/api/v1/cards/');
+        const data = await response.json();
+        setCards(data.cards);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    fetchCards();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!cards.length) {
+    return <div>Loading...</div>;
+  }
+
+  const handleNext = () => {
+    setCurrentIndex((currentIndex + 1) % cards.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((currentIndex - 1 + cards.length) % cards.length);
+  };
+
+   return (
+    <div className="carousel-container">
+      <div className="carousel">
+        <div className="carousel-inner">
+          {cards.map((card, index) => (
+            <div key={index} className={`carousel-item ${index === currentIndex ? "active" : ""}`}>
+              <img src={cardImages.find((image) => image.name_short === card.name_short).URL} alt={card.name_short} />
+            </div>
+          ))}
+        </div>
+        <button className="carousel-control-prev" onClick={handlePrev}>
+          <span className="carousel-control-prev-icon"></span>
+        </button>
+        <button className="carousel-control-next" onClick={handleNext}>
+          <span className="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <div className="carousel-caption-container">
+        <h5 className="descriptionTitles">{cards[currentIndex].name}</h5>
+        <hr />
+        <p className="descriptionTitles">Meaning</p>
+        <p>{cards[currentIndex].meaning_up}</p>
+        <p className="descriptionTitles">Reversed Meaning</p>
+        <p>{cards[currentIndex].meaning_rev}</p>
+      </div>
+    </div>
+  );
+};
+
+export default CardCarousel;
