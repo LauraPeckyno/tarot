@@ -1,5 +1,3 @@
-// Import our custom CSS
-import '../scss/styles.scss'
+// Note: I tried using a bootstrap carousel and it was just too convoluted. I pivoted to using one I created instead.
 
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
+

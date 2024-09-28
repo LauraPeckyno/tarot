@@ -1,6 +1,7 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  
 }
 
 .singleContainer {
@@ -18,30 +19,34 @@ padding:25px;
 }
 
 .carousel-container {
-  border: solid blue;
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 800px;
-  height: 600px;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  min-width: 600px;
+  min-height: 600px;
   padding: 15px;
+  margin: 25px;
 }
 
 .carousel {
-  border: solid red;
   width: 50%;
   height: 600px;
+  margin:50px;
+  padding: 50px;
 }
 
 .carousel-inner {
-  border: solid purple;
   width: 100%;
   height: 100%;
 }
 
 .carousel-item {
-  border: solid green;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -54,12 +59,14 @@ padding:25px;
 }
 
 .carousel-caption-container {
-  border: solid yellow;
   width: 50%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin:50px;
+  padding: 50px;
+  background-color: rgba(27, 20, 11, 0.685);
+  border-radius: 15px;
   color: #fff;
 }
+
 
 
 .carousel-control-prev-icon,
@@ -71,4 +78,65 @@ padding:25px;
 
 .descriptionTitles {
   font-weight: bold;
+}
+
+.fullDeckIntro {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+  align-content: center;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  padding: 15px;
+  margin: 25px;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content:space-between;
+  background-color: white;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 100%;
+  align-items: center;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.leftnav {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  align-content: center;
+  margin:25px;
+  padding: 25px;
+}
+
+.rightnav {
+ background-image: url();
+  margin:25px;
+  padding: 25px;
+}
+.navItem {
+  border-left: solid 1px rgba(49, 41, 41, 0.514);
+  border-right: solid 1px rgba(49, 41, 41, 0.514);
+  background-color: rgba(202, 199, 174, 0.164);
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  align-items: center;
+  align-content: center;
+  font-weight: 500;
+  color:black;
+  text-decoration: none;
+}
+
+.navItem:hover {
+background-color: rgba(235, 207, 84, 0.212);
+cursor: pointer;
+}
+
+.logo {
+  width: 300px;
 }

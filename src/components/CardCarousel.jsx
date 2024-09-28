@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { cardImages } from '../models/cardImages';
 
 const CardCarousel = () => {
-  const [cards, setCards] = useState([]);
-  const [error, setError] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cards, setCards] = useState([]); // empty array for the cards when matched up
+  const [error, setError] = useState(null); // error handling
+  const [currentIndex, setCurrentIndex] = useState(0); // need this for the navigation
 
+// fetching the data from the api. no key required
   useEffect(() => {
     const fetchCards = async () => {
       try {
@@ -20,7 +21,7 @@ const CardCarousel = () => {
   }, []);
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Error: {error.message}</div>;  // basic error message here
   }
 
   if (!cards.length) {
@@ -28,27 +29,31 @@ const CardCarousel = () => {
   }
 
   const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % cards.length);
+    setCurrentIndex((currentIndex + 1) % cards.length); // navigating through the array (forward)
   };
 
   const handlePrev = () => {
-    setCurrentIndex((currentIndex - 1 + cards.length) % cards.length);
+    setCurrentIndex((currentIndex - 1 + cards.length) % cards.length); // navigating through the array (back)
   };
 
    return (
     <div className="carousel-container">
       <div className="carousel">
-        <div className="carousel-inner">
+        <div className="carousel-inner">  
+        {/* mapping through the array to populate the carousel parts*/}
           {cards.map((card, index) => (
-            <div key={index} className={`carousel-item ${index === currentIndex ? "active" : ""}`}>
-              <img src={cardImages.find((image) => image.name_short === card.name_short).URL} alt={card.name_short} />
+            <div key={index} className={`carousel-item ${index === currentIndex ? "active" : ""}`}>  
+              <img src={cardImages.find((image) => image.name_short === card.name_short).URL} alt={card.name} />
+              {/* had to match up the short name from the json objects with my own list of images to get the img src */}
             </div>
           ))}
         </div>
-        <button className="carousel-control-prev" onClick={handlePrev}>
+        <button className="carousel-control-prev" onClick={handlePrev}> 
+          {/* reverse */}
           <span className="carousel-control-prev-icon"></span>
         </button>
         <button className="carousel-control-next" onClick={handleNext}>
+          {/* forward */}
           <span className="carousel-control-next-icon"></span>
         </button>
       </div>

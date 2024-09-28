@@ -1,4 +1,4 @@
-// models/cardImages.js
+// models/cardImages.js  need these to match the card images up with the json data (because they didn't include images!)
 export const cardImages = [
     { name_short:"ar01", URL:"../images/cards/i_042.jpg" }, 
     { name_short:"ar02", URL:"../images/cards/i_044.jpg" }, 

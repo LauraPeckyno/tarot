@@ -5,7 +5,7 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  background-image: url("https://cdn.midjourney.com/e04e3111-d36c-4bb1-98d5-7f029cede83c/0_0.png");
 }

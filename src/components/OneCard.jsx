@@ -17,9 +17,7 @@ import React from "react";
 function OneCard() {
   return (
     <>
-      <div className="singleContainer">
-        <div className="oneCard">OneCard</div>
-      </div>
+<div className="fullDeckIntro"> <h1>Try a Single-Card Reading! </h1></div>
     </>
   );
 }
