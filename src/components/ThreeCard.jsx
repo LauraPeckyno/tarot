@@ -42,30 +42,56 @@ function ThreeCard() {
 
   if (!drawn) {
     return (
+      <>
       <div>
-        <div className="threeCardIntro">
+        <div className="oneCardIntro">
           <h1>Try a Three-Card Reading!</h1>
           <br></br>
-          <p>Three card readings present your Tarot as the PAST (the left card), PRESENT (the center card), and FUTURE (the right card).</p>
-          <p>Remember that it is ultimately up to you to interpret the results.</p>
-          <p>Also, note that cards can be dealt either upright (the way you would normally read them) or reversed (upsidedown). In the event that you've been dealt a reversed card, you will be provided with that meaning.</p>
-          <div className="drawBtn" onClick={drawThreeCards}>Draw Cards</div>
+          <hr width="70%"></hr>
+          <div className="contentContainer">
+          <div className="left">
+            <p>
+            <p>Three card readings present your Tarot as the PAST (the left card), PRESENT (the center card), and FUTURE (the right card). Remember that it is ultimately up to you to interpret the results. Also, note that cards can be dealt either upright (the way you would normally read them) or reversed (upsidedown). In the event that you've been dealt a reversed card, you will be provided with that meaning.</p>
+            </p>
+            <div className="center">
+            <div className="drawBtn" onClick={drawThreeCards}>Draw Cards</div>
+            </div>
+          </div>
+          <div className="right">
+            <img src="/images/mystic1.png" />
+          </div>
         </div>
       </div>
-    );
-  }
+      </div>
+    </>);
+  } // This bracket was missing
 
   return (
+    <>
     <div>
-      <div className="threeCardIntro">
-        <h1>Try a Three-Card Reading!</h1>
-        <p>Three card readings present your Tarot as the PAST (the left card), PRESENT (the center card), and FUTURE (the right card).<br></br>
-        Remember that it is ultimately up to you to interpret the results.<div className="drawBtn" onClick={() => {
+    <div className="oneCardIntro">
+      <h1>Try a Three-Card Reading!</h1>
+      <br></br>
+      <hr width="70%"></hr>
+      <div className="contentContainer">
+      <div className="left">
+        <p>
+        <p>Three card readings present your Tarot as the PAST (the left card), PRESENT (the center card), and FUTURE (the right card). Remember that it is ultimately up to you to interpret the results. Also, note that cards can be dealt either upright (the way you would normally read them) or reversed (upsidedown). In the event that you've been dealt a reversed card, you will be provided with that meaning.</p>
+        </p>
+        <div className="center">
+        <div className="drawBtn" onClick={() => {
   setDrawn(false);
   setDrawnCards([]);
   fetchCards();
-}}>Draw Again</div></p>
+}}>Draw Again</div>
+        </div>
       </div>
+      <div className="right">
+        <img src="/images/mystic1.png" />
+      </div>
+    </div>
+  </div>
+  </div>
         
       <div className="threeCardContainer">
         {drawnCards.map((card, index) => (
@@ -74,9 +100,9 @@ function ThreeCard() {
             <img src={cardImages.find((image) => image.name_short === card.name_short).URL} alt={card.name_short} />
             {card.isReversed ? (
   <div className="descriptionContainer">
-    <p><strong>Reversed:</strong></p>
+    <h3>Reversed:</h3>
     <p>{card.meaning_rev}</p>
-    <p><strong>Upright Meaning for Reference:</strong></p>
+    <h5>Upright Meaning for Reference:</h5>
     <p>{card.meaning_up}</p>
   </div>
 ) : (
@@ -84,13 +110,13 @@ function ThreeCard() {
     <p>{card.meaning_up}</p>
   </div>
 )}
-            {index === 0 && <h1>PAST</h1>}
-            {index === 1 && <h1>PRESENT</h1>}
-            {index === 2 && <h1>FUTURE</h1>}
+            {index === 0 && <h2>PAST</h2>}
+            {index === 1 && <h2>PRESENT</h2>}
+            {index === 2 && <h2>FUTURE</h2>}
               </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

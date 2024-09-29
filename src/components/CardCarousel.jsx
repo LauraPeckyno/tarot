@@ -58,11 +58,11 @@ const CardCarousel = () => {
         </button>
       </div>
       <div className="carousel-caption-container">
-        <h5 className="descriptionTitles">{cards[currentIndex].name}</h5>
+        <h3>{cards[currentIndex].name}</h3>
         <hr />
-        <p className="descriptionTitles">Meaning</p>
+        <h5>Meaning</h5>
         <p>{cards[currentIndex].meaning_up}</p>
-        <p className="descriptionTitles">Reversed Meaning</p>
+        <h5>Reversed Meaning</h5>
         <p>{cards[currentIndex].meaning_rev}</p>
       </div>
     </div>

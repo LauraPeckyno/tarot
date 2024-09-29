@@ -9,3 +9,27 @@ body {
   width: 100%;
   background-image: url("https://cdn.midjourney.com/e04e3111-d36c-4bb1-98d5-7f029cede83c/0_0.png");
 }
+
+h1 {
+  font-size: 60px ;
+}
+
+h2 {
+  font-size: 46px ;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p{
+  font-size: 20px;
+}
