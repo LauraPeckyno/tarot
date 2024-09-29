@@ -141,18 +141,7 @@ cursor: pointer;
   width: 300px;
 }
 
-.oneCardContainer {
-  border: solid 1px rgb(189, 189, 189);
-  background-color: white;
-  border-radius: 15px;
-  align-items: center;
-  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
-  width: 80vw;
-  min-width: 600px;
-  min-height: 600px;
-  padding: 15px;
-  margin: 25px;
-}
+
 
 .drawBtn {
   border: solid 1px rgba(49, 41, 41, 0.514);
@@ -182,4 +171,141 @@ cursor: pointer;
   width: 80vw;
   padding: 50px;
   margin: 25px;
+}
+
+.threeCardContainer {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
+  /* align-items: center; */
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  min-width: 600px;
+  min-height: 600px;
+  padding: 15px;
+  margin: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.threeCardIntro {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+  align-content: center;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  padding: 50px;
+  margin: 25px;
+}
+
+.cardContainer {
+width: 500px;
+min-height: 800px;
+padding: 25px;
+}
+
+.descriptionContainer {
+  width: 95%;
+  margin:10px;
+  padding: 50px;
+  background-color: rgba(27, 20, 11, 0.685);
+  border-radius: 15px;
+  color: #fff;
+}
+.singledescriptionContainer {
+  width: 50%;
+  margin: 10px;
+  padding: 50px;
+  background-color: rgba(27, 20, 11, 0.685);
+  border-radius: 15px;
+  color: #fff;
+}
+
+.cardName {
+  flex-wrap: wrap;
+  margin: 15px;
+}
+.push {
+  display:flex;
+  justify-content:inherit;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.oneCardContainer {
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  min-width: 600px;
+  min-height: 600px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.flexer {
+  display:flex;
+  justify-content: space-evenly;
+  margin:15px;
+}
+
+.readingsIntro {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  padding: 15px;
+  margin: 25px;
+}
+
+.learnMoreText {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+  align-content: center;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  padding: 50px;
+  margin: 25px;
+}
+
+.learningContainer {
+  background-color: white;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.boxedul {
+  border: solid 1px rgb(189, 189, 189);
+  width: 50%;
+  margin:25px auto;
+  align-self: center;
+  text-align: left;
+}
+
+.homeIntro {
+  border: solid 1px rgb(189, 189, 189);
+  background-color: white;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: center;
+  align-content: center;
+  box-shadow: 10px 5px 5px rgba(49, 41, 41, 0.514);
+  width: 80vw;
+  padding: 15px;
+  margin: 0 auto;
 }
