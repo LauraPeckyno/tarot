@@ -12,3 +12,8 @@ I'm fetching tarot cards with their associated meanings from the tarot api. This
 For the Explore page, I've created a carousel of the entire deck, so you can explore all the cards and meanings at your leisure. I initially wanted to use bootstrap for this carousel (you can see vestigaes of that in the code), but it was clumsy. I pivoted and created my own.
 
 For the future, I'd like to include images for the reversed cards and an option to display the reversed version.
+
+Permalink to project:
+https://tarothome.netlify.app
+
+

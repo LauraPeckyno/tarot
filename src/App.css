@@ -210,7 +210,8 @@ cursor: pointer;
 }
 
 .cardContainer {
-width: 500px;
+width: 450px;
+border: solid red;
 min-height: 800px;
 padding: 25px;
 }
